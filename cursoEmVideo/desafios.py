@@ -204,7 +204,7 @@ def desafio21(a=''):
 
 	mixer.init()
 
-	mixer.music.load('desafio21.mp3')
+	mixer.music.load('files/desafio21.mp3')
 	mixer.music.play()
 	time.sleep(10)
 	mixer.music.stop()
