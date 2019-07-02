@@ -606,3 +606,56 @@ def desafio43():
 		print('Obesidade Mórbida')
 
 	return None
+
+
+def desafio44():
+	'''CALCULAR DESCONTO EM FUNÇÃO DE FORMA DE PAGAMENTO'''
+
+	valor_produto = float(input('Qual o valor do produto? R$'))
+	forma_pagamento = int(input('Selecione uma forma de pagamento:\n1 - dinheiro/cheque\n2 - cartão a vista\n3 - 2x no cartão\n4 - 3x no cartão'))
+
+	if forma_pagamento == 1:
+		print(f'Você selecionou a forma de pagamento a vista no dinheiro ou cheque.')
+		print(f'O preço é de R${valor_produto:.2f}')
+		print(f'O preço com desconto é de R${valor_produto - (valor_produto * 0.1):.2f}')
+	elif forma_pagamento == 2:
+		print(f'Você selecionou a forma de pagamento a vista no cartão.')
+		print(f'O preço é de R${valor_produto:.2f}')
+		print(f'O preço com desconto é de R${valor_produto - (valor_produto * 0.05):.2f}')
+	elif forma_pagamento == 3:
+		print(f'Você selecionou a forma de pagamento a vista no cartão.')
+		print(f'O preço é de R${valor_produto:.2f}')
+	elif forma_pagamento == 4:
+		print(f'Você selecionou a forma de pagamento a vista no cartão.')
+		print(f'O preço é de R${valor_produto:.2f}')
+		print(f'O preço com júros é de R${valor_produto * 1.2:.2f}')
+
+	return None
+
+
+def desafio45():
+	'''JOKENPÔ'''
+
+	possibilidades = ['pedra','papel','tesoura']
+
+	print('[0] Pedra\n[1] Papel\n[2] Tesoura')
+
+	escolha_usuario = int(input())
+
+	escolha_maquina = random.randint(0, 2)
+
+	print(f'\n\n{escolha_maquina}\n\n')
+
+	if escolha_usuario == 0 and escolha_maquina == 1 or (
+			escolha_usuario == 1 and escolha_maquina == 2) or(
+			escolha_usuario == 2 and escolha_maquina == 0):
+		print('Você perdeu!')
+		print(f'{possibilidades[escolha_usuario]} perde para {possibilidades[escolha_maquina]}')
+	elif escolha_usuario == escolha_maquina:
+		print('Empate!')
+		print(f'{possibilidades[escolha_usuario]} é igual a {possibilidades[escolha_maquina]}')
+	else:
+		print('Você venceu!')
+		print(f'{possibilidades[escolha_usuario]} ganha de {possibilidades[escolha_maquina]}')
+
+	return None
