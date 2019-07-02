@@ -5,13 +5,13 @@ import requests, math, random, time
 from pygame import mixer
 
 
-def desafio1(a=''):
+def desafio1():
 	'''LER UM NOME E FAZER SAUDAÇÃO'''
 	nome = str(input('Qual seu nome?'))
 	return f'Olá {nome}! Seja bem vindo'
 
 
-def desafio2(a=''):
+def desafio2():
 	'''RECEBER DIA, MÊS E ANO E RETORNAR DATA FORMATADA'''
 	dia = int(input('DIA = '))
 	mes = int(input('MÊS = '))
@@ -20,14 +20,14 @@ def desafio2(a=''):
 	return f'A data formatada é: {dia}/{mes}/{ano}'
 
 
-def desafio3(a=''):
+def desafio3():
 	'''RECEBER DOIS NÚMEROS E REALIZAR A SOMA'''
 	numero1 = int(input('Primeiro número: '))
 	numero2 = int(input('Segundo número: '))
 	return f'A soma de {numero1} + {numero2} = {numero1 + numero2}'
 
 
-def desafio4(a=''):
+def desafio4():
 	'''VERIFICAÇÃO DE TIPOS'''
 	arg = input('Digite o que quiser: ')
 
@@ -41,13 +41,13 @@ def desafio4(a=''):
 		return 'sei não'
 
 
-def desafio5(a=''):
+def desafio5():
 	num = int(input('Entre com um número: '))
 
 	return f'O antecessor é {num - 1} e o sucessor é {num + 1}'
 
 
-def desafio6(a=''):
+def desafio6():
 	'''OPERADORES ARITMÉTICOS'''
 	num = int(input('Digite um número: '))
 	print(f'O dobro de {num} é {num * 2}.')
@@ -57,7 +57,7 @@ def desafio6(a=''):
 	pass
 
 
-def desafio7(a=''):
+def desafio7():
 	'''CALCULAR MÉDIA DE DOIS VALORES'''
 	num1 = int(input('Entre com a primeira nota: '))
 	num2 = int(input('Entre com a segunda nota: '))
@@ -65,7 +65,7 @@ def desafio7(a=''):
 	return f'A média do aluno é: {(num1 + num2)/2}'
 
 
-def desafio8(a=''):
+def desafio8():
 	'''CONVERTER METROS EM MILIMETROS E CENTIMETROS'''
 
 	metros = float(input('Entre com o valor em métros: '))
@@ -73,7 +73,7 @@ def desafio8(a=''):
 	return f'Este valor em centímetros é {metros*100} e em milímetros é {metros*1000}'
 
 
-def desafio9(a=''):
+def desafio9():
 	'''TABUADA FORMATADA'''
 
 	num = int(input('Qual a tabuada você quer ver? '))
@@ -84,7 +84,7 @@ def desafio9(a=''):
 	pass
 
 
-def desafio10(a=''):
+def desafio10():
 	'''CONVERTER REAL EM DOLAR'''
 
 	r = requests.get('https://api.hgbrasil.com/finance/quotations?format=json&key=b533ca4d')
@@ -98,7 +98,7 @@ def desafio10(a=''):
 	return f'Você pode comprar US${real / dolar:.2f}'
 
 
-def desafio11(a=''):
+def desafio11():
 	'''CALCULAR QUANTIDADE DE TINTA'''
 
 	largura = float(input('Qual a largura da parede?'))
@@ -114,7 +114,7 @@ def desafio11(a=''):
 	return f'São necessários {quantidade_de_tinta:.3f}l de tinta para pinta-la'
 
 
-def desafio12(a=''):
+def desafio12():
 	'''CALCULAR DESCONTO DE 5%'''
 
 	valor_do_produto = float(input('Qual o valor do produto?'))
@@ -122,7 +122,7 @@ def desafio12(a=''):
 	return f'O valor do produto com 5% de desconto é R${valor_do_produto * 0.95}'
 
 
-def desafio13(a=''):
+def desafio13():
 	'''CALCULAR AUMENTO SALÁRIO 15%'''
 
 	valor_do_salario = float(input('Qual o valor do salário?'))
@@ -130,7 +130,7 @@ def desafio13(a=''):
 	return f'O valor do salário com 15% de aumento é R${valor_do_salario * 1.15}'
 
 
-def desafio14(a=''):
+def desafio14():
 	'''CONVERTER °C EM  °F'''
 
 	temperatura = float(input('Qual a temperatura em °C? '))
@@ -138,7 +138,7 @@ def desafio14(a=''):
 	return f'{temperatura}°C é o mesmo que {temperatura * 1.8 + 32}°F'
 
 
-def desafio15(a=''):
+def desafio15():
 	'''CALCULAR PREÇO DE ALUGUEL POR DIAS E KM RODADOS'''
 
 	km_rodados = float(input('Qual a quilometragem rodada? '))
@@ -150,7 +150,7 @@ def desafio15(a=''):
 	return f'Valor das diárias R${km_rodados * 0.15:.2f} + valor da kilometragem R${dias_aluguel * 60} = Total R${valor_total}'
 
 
-def desafio16(a=''):
+def desafio16():
 	'''PEGAR UM NÚMERO REAL E SÓ EXIBIR A PARTE INTEIRA COM A LIB MATH'''
 
 	num = float(input('Digite o número: '))
@@ -158,7 +158,7 @@ def desafio16(a=''):
 	return f'A parte inteira de {num} é {math.trunc(num)}'
 
 
-def desafio17(a=''):
+def desafio17():
 	'''CALCULAR A HIPOTENUSA DOS CATETOS'''
 
 	cateto1 = float(input('Cateto oposto: '))
@@ -168,7 +168,7 @@ def desafio17(a=''):
 	return f'A hipotenusa dos catetos {cateto1} e {cateto2} = {math.hypot(cateto1, cateto2):.2f}'
 
 
-def desafio18(a=''):
+def desafio18():
 	'''RETORNAR O SENO, COSSENO, TANGENTE DE UM NÚMERO'''
 
 	num = float(input('Entre com o número desejado: '))
@@ -176,7 +176,7 @@ def desafio18(a=''):
 	return f'Seno, cosseno e tangente de {num} é respectivamente: {math.sin(num)}, {math.cos(num)}, {math.tan(num)}.'
 
 
-def desafio19(a=''):
+def desafio19():
 	'''SORTEAR UM NOME ENTRE 4'''
 
 	nomes = ['','','','']
@@ -187,7 +187,7 @@ def desafio19(a=''):
 	return f'O sorteado foi {random.choice(nomes)}'
 
 
-def desafio20(a=''):
+def desafio20():
 	'''SORTEAR UMA ORDEM EM UMA LISTA'''
 
 	nomes = ['','','','']
@@ -199,7 +199,7 @@ def desafio20(a=''):
 
 	return f'A ordem sorteada foi: {nomes}'
 
-def desafio21(a=''):
+def desafio21():
 	'''REPRODUZIR MP3 EM PYTHON'''
 
 	mixer.init()
@@ -212,7 +212,7 @@ def desafio21(a=''):
 	return None
 
 
-def desafio22(a=''):
+def desafio22():
 	'''MANIPULAÇÃO DE STRINGS'''
 
 	nome = str(input('Qual seu nome? '))
@@ -228,7 +228,7 @@ def desafio22(a=''):
 	return None
 
 
-def desafio23(a=''):
+def desafio23():
 	'''RECEBER UM NÚMERO E FALAR UNIDADE, DEZENA, CENTENA E MILHAR'''
 	numero = int(input('Entre com um número de 0 a 9999:'))
 
@@ -258,7 +258,7 @@ def desafio23(a=''):
 		print('São válidos somente números entre 0 e 9999!')'''
 
 
-def desafio24(a=''):
+def desafio24():
 	'''VERIFICAR SE O NOME DA CIDADE COMEÇA COM SANTO'''
 	cidade = str(input('Qual o nome da cidade: '))
 
@@ -268,7 +268,7 @@ def desafio24(a=''):
 		print(f'A cidade {cidade} não começa com Santo.')
 
 
-def desafio25(a=''):
+def desafio25():
 	'''VERIFICAR SE A PESSOA POSSUI SILVA NO NOME'''
 
 	nome = str(input('Qual o seu nome completo: '))
@@ -279,7 +279,7 @@ def desafio25(a=''):
 		print('Seu nome contém Silva.')
 
 
-def desafio26(a=''):
+def desafio26():
 	'''REPETIÇÕES E POSIÇÕES DA LETRA A NA FRASE'''
 
 	frase = str(input('Digite uma frase: ')).strip()
@@ -291,7 +291,7 @@ def desafio26(a=''):
 	print(f'A letra A aparece {repeticoes_de_a} vezes na frase\nA primeira ocorrência foi na {primeira_ocorrencia_a}ª posição\nA ultima na {ultima_ocorrencia_a}ª posição')
 
 
-def desafio27(a=''):
+def desafio27():
 	'''IDENTIFICAR PRIMEIRO E ÚLTIMO NOME'''
 	nome = str(input('Nome completo: '))
 
@@ -303,7 +303,7 @@ def desafio27(a=''):
 	return None
 
 
-def desafio28(a=''):
+def desafio28():
 	'''JOGO DE ADIVINHAR NÚMERO DE 0 - 5'''
 	mensagem = f'''{'-=-' * 20}\nVOU PENSAR EM UM NÚMERO DE 0 - 5. TENTE ADIVINHAR...\n{'-=-' * 20}'''
 
@@ -317,7 +317,7 @@ def desafio28(a=''):
 	return None
 
 
-def desafio29(a=''):
+def desafio29():
 	'''MULTA POR VELOCIDADE'''
 	velocidade = float(input('Qual a velocidade do veículo: '))
 
@@ -330,7 +330,7 @@ def desafio29(a=''):
 	return None
 
 
-def desafio30(a=''):
+def desafio30():
 	'''É PAR OU ÍMPAR'''
 	numero = int(input('Qual o número: '))
 
@@ -339,7 +339,7 @@ def desafio30(a=''):
 	return None
 
 
-def desafio31(a=''):
+def desafio31():
 	'''PREÇO DA VIAGEM'''
 	km_distancia = float(input('Distância da viagem: '))
 
@@ -348,7 +348,7 @@ def desafio31(a=''):
 	return None
 
 
-def desafio32(a=''):
+def desafio32():
 	'''É BISEXTO OU NÃO É?!?!'''
 	ano = int(input('Ano bisexto??? '))
 
@@ -360,7 +360,7 @@ def desafio32(a=''):
 	return None
 
 
-def desafio33(a=''):
+def desafio33():
 	'''MAIOR E MENOR NÚMERO'''
 	for i in range(0,3):
 		numero = int(input(f'Qual o {i+1}º número : '))
@@ -377,7 +377,7 @@ def desafio33(a=''):
 	return None
 
 
-def desafio34(a=''):
+def desafio34():
 	'''AUMENTO DE SALÁRIO'''
 	salario = float(input('Qual o valor do salário: '))
 
@@ -391,7 +391,7 @@ def desafio34(a=''):
 	return None
 
 
-def desafio35(a=''):
+def desafio35():
 	'''É TRIÂNGULO OU NÃO É?!?!?!?!'''
 	reta_a = float(input('Reta A: '))
 	reta_b = float(input('Reta B: '))
@@ -399,13 +399,15 @@ def desafio35(a=''):
 
 	if (reta_a + reta_b > reta_c) and (reta_a + reta_c > reta_b) and (reta_b + reta_c > reta_a):
 		print('Pode formar um triângulo.')
+		return True
 	else:
 		print('Não forma um triângulo.')
+		return False
 
-	return None
 
+def cores_no_terminal():
+	'''EXIBE AS CORES QUE PODEM SER UTILIZADAS NO TERMINAL'''
 
-def cores_no_terminal(a=''):
 	print('Para utilizar cores no terminal, basta utilizar código ANSI.\n\n \\033[<estilo>;<cor-da-letra>;<cor-de-fundo>m\n')
 	print('\33[1;30;42mAbaixo temos as tabelas de cores:'+'\033[0m\n')
 
@@ -442,5 +444,165 @@ def cores_no_terminal(a=''):
 				padrao_fundo = f'\033[0;0;{cor_fundo}m'
 				print(preto, end="")
 		print()
+
+	return None
+
+
+def desafio36():
+	'''APROVAR EMPRÉSTIMO'''
+
+	valor_emprestimo = float(input('Qual o valor do imóvel? R$'))
+	valor_salario = float(input('Qual seu salário? R$'))
+	tempo = int(input('Quantos tempo de financiamento (em anos)?'))
+
+	mensalidade = valor_emprestimo / (tempo * 12)
+
+	if mensalidade > (valor_salario * 0.3):
+		print(f'''O valor da mensalidade ultrapassa 30% do seu salário.
+		Não é possível realizar o epréstimo.
+		Salário: R${valor_salario}
+		Empréstimo: R${valor_emprestimo}
+		Valor da mensalidade: R${mensalidade}''')
+	else:
+		print(f'''Empréstimo aprovado!
+		Salário: R${valor_salario}
+		Empréstimo: R${valor_emprestimo}
+		Valor da mensalidade: R${mensalidade}
+		''')
+	return None
+
+
+def desafio37():
+	'''CONVERTER INTEIRO PARA BINÁRIO, OCTAL E HEXADECIMAL'''
+
+	numero = int(input('Entre com um número inteiro: '))
+	selecao = int(input('''Selecione a conversão desejada:
+	1 - Binário
+	2 - Octal
+	3 - Hexadecimal\n'''))
+
+	if selecao == 1:
+		print(f'{numero} em binário é: {bin(numero)[2:]}')
+	elif selecao == 2:
+		print(f'{numero} em octal é: {oct(numero)[2:]}')
+	elif selecao == 3:
+		print(f'{numero} em hexadecimal é: {hex(numero)[2:]}')
+	else:
+		print('Opção inválida!')
+
+	return None
+
+
+def desafio38():
+	'''COMPARA DOIS NÚMEROS'''
+
+	numero1 = int(input('Primeiro número: '))
+	numero2 = int(input('Segundo número: '))
+
+	if numero1 > numero2:
+		print('O primeiro valor é maior!')
+	elif numero1 < numero2:
+		print('O segundo valor é maior')
+	else:
+		print('Não existe número maior. Os dois são iguais.')
+
+	return None
+
+
+def desafio39():
+	'''VERIFICA DATA DE ALISTAMENTO MILITAR'''
+
+	ano_atual = time.localtime()[0]
+	ano_nascimento = int(input('Ano de nascimento: '))
+	idade_atual = ano_atual - ano_nascimento
+
+	if idade_atual < 18:
+		print(f'Quem nasceu em {ano_nascimento} tem {ano_atual - ano_nascimento} anos em {ano_atual}.')
+		print(f'Ainda faltam {18 - idade_atual} ano(s) para se alistar.')
+		print(f'Seu alistamento será em {ano_atual + (18 - idade_atual)}')
+	elif idade_atual > 18:
+		print(f'Quem nasceu em {ano_nascimento} tem {ano_atual - ano_nascimento} anos em {ano_atual}.')
+		print(f'Você deveria ter se alistado há {idade_atual - 18} ano(s).')
+		print(f'Seu alistamento foi em {ano_atual - (idade_atual - 18)}.')
+	else:
+		print('Você deve se alistar o mais rápido possível!')
+
+	return None
+
+
+def desafio40():
+	'''VERIFICAR MÉDIA DE ALUNO'''
+
+	nota1 = float(input('Valor da primeira nota: '))
+	nota2 = float(input('Valor da segunda nota: '))
+
+	if ((nota1 + nota2) / 2) < 5.0:
+		print('REPROVADO')
+	elif ((nota1 + nota2) / 2) >= 5.0 and ((nota1 + nota2) / 2) <= 6.9:
+		print('RECUPERAÇÃO')
+	else:
+		print('APROVADO')
+
+	return None
+
+
+def desafio41():
+	'''VERIFICAR CATEGORIA NATAÇÃO'''
+
+	ano_atual = time.localtime()[0]
+	ano_nascimento = int(input('Ano de nascimento: '))
+	idade_atual = ano_atual - ano_nascimento
+
+	if idade_atual <= 9:
+		print('MIRIM')
+	elif idade_atual <= 14 and idade_atual > 9:
+		print('INFANTIL')
+	elif idade_atual <= 19 and idade_atual > 14:
+		print('JUNIOR')
+	elif idade_atual <= 20 and idade_atual > 19:
+		print('SÊNIOR')
+	else:
+		print('MASTER')
+
+	return None
+
+
+def desafio42():
+	'''VERIFICA O TIPO DE TRIÂNGULO'''
+
+	reta_a = float(input('Reta A: '))
+	reta_b = float(input('Reta B: '))
+	reta_c = float(input('Reta C: '))
+
+	if (reta_a + reta_b > reta_c) and (reta_a + reta_c > reta_b) and (reta_b + reta_c > reta_a):
+		if (reta_a == reta_b) and (reta_a == reta_c):
+			print('EQUILÁTERO')
+		elif (reta_a != reta_b) and (reta_a != reta_c) and (reta_b != reta_c):
+			print('ESCALENO')
+		else:
+			print('ISÓCELES')
+	else:
+		print('Não forma um triângulo.')
+
+	return None
+
+
+def desafio43():
+	'''CALCULAR IMC'''
+
+	peso = float(input('Qual seu peso? '))
+	altura = float(input('Qual sua altura? '))
+	imc = peso / (altura**2)
+
+	if imc <= 18.5:
+		print('Abaixo do peso')
+	elif imc > 18.5 and imc < 25:
+		print('Peso Ideal')
+	elif imc >= 25 and imc <= 30:
+		print('Sobrepeso')
+	elif imc > 30 and imc <= 40:
+		print('Obesidade')
+	else:
+		print('Obesidade Mórbida')
 
 	return None
