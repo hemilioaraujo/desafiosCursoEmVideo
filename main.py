@@ -1,9 +1,7 @@
-from CursoEmVideo import CursoEmVideo
+from cursoEmVideo import desafios
 import time
 
-a = CursoEmVideo()
-
 #BASTA REMOVER O "#" DA LINHA DE BAIXO E UTILIZAR A FUNÇÃO QUE DESEJAR
-#a.cores_no_terminal()
+#desafios.cores_no_terminal()
 
-time.sleep(10)
+time.sleep(2)
